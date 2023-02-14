@@ -48,12 +48,14 @@ function pismo() {
     
 }
 
+canvas.addEventListener('mousemove', function(e) {
+    
+})
 canvas.addEventListener('click', function(e) {
     let rect = canvas.getBoundingClientRect();
     let mouseX = e.clientX - rect.left;
     let mouseY = e.clientY - rect.top;
     //console.log(rect.left, rect.top, rect);
-
     let heartWidth = 75;
     let heartHeight = 85;
     let heartX = 265;
@@ -65,5 +67,6 @@ canvas.addEventListener('click', function(e) {
       pismo();
     }
 })
+
 
   
