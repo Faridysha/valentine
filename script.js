@@ -24,7 +24,6 @@ draw: function() {
 heart.draw();
 function text() {
     ctx.fillStyle = 'black';
-    ctx.font = '20px Marck Script'
     ctx.fillText('Принимая во внимание ваши достоинства,', 10,130);
     ctx.fillText('Мне бы хотелось с вами погулять', 10, 160)
 }
@@ -37,9 +36,11 @@ function girl() {
     
 }
 function pismo() {
-    ctx.clearRect(0,0,canvas.width, canvas.height);
-    girl();
+    
+    ctx.font = '20px Marck Script'
     text();
+    girl();
+    
 }
 
 canvas.addEventListener('click', function(e) {
@@ -55,7 +56,9 @@ canvas.addEventListener('click', function(e) {
     if (mouseX >= heartX && mouseX <= heartX + heartWidth &&
         mouseY >= heartY && mouseY <= heartY + heartHeight) {
       // The heart was clicked
-      pismo();}
+      ctx.clearRect(0,0,canvas.width, canvas.height);
+      pismo();
+    }
 })
 
   
