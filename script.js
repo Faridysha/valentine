@@ -7,13 +7,15 @@ ctx.lineTo(300, 150);
 ctx.lineTo(600,0);
 ctx.closePath();
 ctx.stroke();
+ctx.font = '35px Marck Script';
+ctx.fillText('Нажми на сердечко', 170, 280);
 
 /* Heart */
 let heart = {
-
+color: 'rgb(222,51,51)',
 draw: function() {
     ctx.beginPath();
-    ctx.fillStyle = 'rgb(222,51,51)';
+    ctx.fillStyle = this.color;
     ctx.moveTo(300,130);
     ctx.quadraticCurveTo(265, 105 , 250 , 130);
     ctx.quadraticCurveTo(240, 155 , 300 , 190);
@@ -21,6 +23,8 @@ draw: function() {
     ctx.quadraticCurveTo(335, 105 , 300 , 130);
     ctx.fill();
 } }
+
+
 heart.draw();
 function text() {
     ctx.fillStyle = 'black';
@@ -48,9 +52,7 @@ function pismo() {
     
 }
 
-canvas.addEventListener('mousemove', function(e) {
-    
-})
+
 canvas.addEventListener('click', function(e) {
     let rect = canvas.getBoundingClientRect();
     let mouseX = e.clientX - rect.left;
