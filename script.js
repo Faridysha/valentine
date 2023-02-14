@@ -24,8 +24,13 @@ draw: function() {
 heart.draw();
 function text() {
     ctx.fillStyle = 'black';
-    ctx.fillText('Принимая во внимание ваши достоинства,', 10,130);
-    ctx.fillText('Мне бы хотелось с вами погулять', 10, 160)
+    ctx.font = '35px Marck Script';
+    ctx.fillText('Моя валентинка для тебя', 100, 30);
+    ctx.font = '20px Marck Script';
+    ctx.fillText('В этот день любви я хочу сказать', 15,110);
+    ctx.fillText('Как много ты значишь для меня.', 15, 140);
+    ctx.fillText('Хочу тебя пригласить на свидание.', 15,170);
+    ctx.fillText('Напиши мне, если ты не против', 30, 280);
 }
 function girl() {
     let girl = new Image();
