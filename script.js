@@ -1,6 +1,15 @@
- let canvas = document.getElementById('heart');
-ctx = canvas.getContext('2d');
+ /* Шребаный грифт */
+let font = new FontFace('Marck Script', 'url(https://fonts.gstatic.com/s/marckscript/v16/nwpTtK2oNgBA3Or78gapdwuyzCg_WMM.woff2)');
+font.load().then(() => {
+    document.fonts.add(font);
+
+let canvas = document.getElementById('heart');
+let ctx = canvas.getContext('2d');
+ctx.font = '20px Marck Script';
+
+
 /* Letter */
+
 ctx.beginPath();
 ctx.moveTo(0,0);
 ctx.lineTo(300, 150);
@@ -8,7 +17,7 @@ ctx.lineTo(600,0);
 ctx.closePath();
 ctx.stroke();
 ctx.font = '35px Marck Script';
-ctx.fillText('Нажми на сердечко', 170, 280);
+ctx.fillText('Нажми на сердечко', 160, 280);
 
 /* Heart */
 let heart = {
@@ -46,7 +55,7 @@ function girl() {
 }
 function pismo() {
     
-    ctx.font = '20px Marck Script'
+   
     text();
     girl();
     
@@ -72,3 +81,4 @@ canvas.addEventListener('click', function(e) {
 
 
   
+});
